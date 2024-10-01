@@ -30,7 +30,7 @@ paths:
         explode: true
         schema:
           type: string
-          example: 6cb2448603181bcb3ad20d85b05835b1
+            example: Your_API_KEY
       responses:
         "200":
           description: Successful response
