@@ -1,4 +1,4 @@
-## API Documentation : Weather API 
+## API Documentation : OpenWeather API 
 -> Welcome to the OpenWeather API documentation repository. This project is a part of my portfolio for demonstrating proficiency in API documentation using tools
    like Swagger, Postman, and GitHub.
 
