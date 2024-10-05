@@ -84,11 +84,13 @@ After the dependencies are installed, users can start the local server using the
 
 `node server.js`
 
+This will start the server, and users can access the Swagger UI documentation locally at: `http://localhost:3000/api-docs`
+
 ## Postman Collection
 
-You can find the sample Postman collection [here](https://api.openweathermap.org/data/2.5/weather?q=London&appid=6cb2448603181bcb3ad20d85b05835b1)) to test the API requests yourself.
+You can find the sample Postman collection [here](https://api.openweathermap.org/data/2.5/weather?q=London&appid=6cb2448603181bcb3ad20d85b05835b1) to test the API requests yourself.
 
-This will start the server, and users can access the Swagger UI documentation locally at: `http://localhost:3000/api-docs`
+
 
 ## Error handling
 
