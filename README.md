@@ -2,8 +2,7 @@
 -> Welcome to the OpenWeather API documentation repository. This project is a part of my portfolio for demonstrating proficiency in API documentation using tools
    like Swagger, Postman, and GitHub.
 
-The OpenWeather API delivers real-time weather data for any city in the world, which may be linked into a variety of applications, including mobile apps and data analytics platforms.
-
+The OpenWeather API provides access to real-time weather data for any city worldwide, which can be integrated into various applications, from mobile apps to data analytics platforms.
 
 ## Tools and Technologies
    - **Swagger**: Used for creating the API documentation.
@@ -29,9 +28,9 @@ The OpenWeather API delivers real-time weather data for any city in the world, w
 
 ## How to Authenticate
 
-	1.	Get Your API Key:
+1.	Get Your API Key:
 	  -After signing up, navigate to the API Keys section of your account and copy your unique key.
-	2.	Including Your API Key in Requests:
+2.	Including Your API Key in Requests:
 	  -You need to pass your API key as a query parameter in every request.
 	  -The parameter is appid.
     Your API key should be kept private and not exposed in public repositories.
@@ -62,16 +61,47 @@ The OpenWeather API delivers real-time weather data for any city in the world, w
 
 ## Viewing Swagger Documentation Locally
 1. Clone the repo:
-2. Go to the Swagger folder and open the 'index.html' file in your browser to view the API documentation.
+
+Users should clone your repository containing the documentation files (e.g., swagger.yaml, server.js):
+
+`git clone https://github.com/excell604/swagger-ui-docs.git`
+
+2. Install Node.js and Dependencies
+
+Ensure users have Node.js installed on their system. If they don’t, they can download it [here](https://nodejs.org/en).
+
+Once Node.js is installed, navigate to the cloned repository and install the required dependencies by running:
+
+`cd swagger-ui-docs
+npm install`
+
+This command will install any required modules such as express, swagger-ui-express, and yamljs.
+
+
+3. Start the Server
+
+After the dependencies are installed, users can start the local server using the following command:
+
+`node server.js`
 
 ## Postman Collection
 
 You can find the sample Postman collection [here](https://api.openweathermap.org/data/2.5/weather?q=London&appid=6cb2448603181bcb3ad20d85b05835b1)) to test the API requests yourself.
 
+This will start the server, and users can access the Swagger UI documentation locally at: `http://localhost:3000/api-docs`
+
 ## Error handling
 
-If you don’t include the correct API key, you’ll receive a 401 Unauthorized error:
-{
+If you don’t include the correct API key, you will receive a 401 Unauthorized error:
+
+`{
   "cod": 401,
   "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."
-}
+}`
+
+If you don’t type city names right, you will receive a 404 not found error:
+
+`{
+  "cod": "404",
+  "message": "city not found"
+}`
